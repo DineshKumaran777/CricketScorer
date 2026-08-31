@@ -30,6 +30,10 @@ validateEnv();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Behind a reverse proxy (Render/Heroku), trust the first hop so
+// express-rate-limit can read the real client IP from X-Forwarded-For.
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(cors({
   origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
