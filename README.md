@@ -67,7 +67,7 @@ This repo is structured so a Render **Web Service** can build it directly from t
    | **Start Command** | `npm start` |
    | **Root Directory** | `/` |
 
-4. Add the environment variables (see below). At minimum set `DATABASE_URL`, `JWT_SECRET`, and `GOOGLE_CLIENT_ID`.
+4. Add the environment variables (see below). At minimum set `DATABASE_URL` and `JWT_SECRET`.
 5. After the service starts, run the migrations once from the Render shell:
 
    ```bash
@@ -82,7 +82,7 @@ This repo is structured so a Render **Web Service** can build it directly from t
 |---|---|---|
 | `DATABASE_URL` | Yes | Neon/Postgres connection string |
 | `JWT_SECRET` | Yes | Long random string for signing JWTs |
-| `GOOGLE_CLIENT_ID` | Yes | For Google OAuth |
+| `GOOGLE_CLIENT_ID` | Optional | For Google OAuth (not currently used by the API) |
 | `CORS_ORIGIN` | Optional | Frontend origin; defaults to `http://localhost:3000` |
 | `PORT` | Optional | Render injects its own `PORT`; defaults to `3000` |
 | `NODE_ENV` | Optional | Set to `production` |

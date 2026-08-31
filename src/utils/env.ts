@@ -1,4 +1,4 @@
-const requiredEnvVars = ['DATABASE_URL', 'JWT_SECRET', 'GOOGLE_CLIENT_ID'] as const;
+const requiredEnvVars = ['DATABASE_URL', 'JWT_SECRET'] as const;
 const optionalEnvVars = ['PORT', 'NODE_ENV', 'CORS_ORIGIN'] as const;
 
 export function validateEnv(): void {
