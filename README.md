@@ -53,6 +53,8 @@ npm run migrate      # drizzle-kit migrate
 
 ## Deploying to Render
 
+> **Easy path:** This repo includes a [`render.yaml`](./render.yaml) blueprint. In Render, pick **New > Blueprint**, connect this repo, and it will auto-create the web service with all environment variables wired up. Fill the blank secret values once in the dashboard.
+
 This repo is structured so a Render **Web Service** can build it directly from the root.
 
 1. Create a **Neon** (or any PostgreSQL) database and copy its connection string.
