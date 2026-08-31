@@ -19,7 +19,8 @@ services:
 
       # --- Optional (safe defaults are provided by the code if unset) ---
       # PORT is injected automatically by Render for web services; do not override it.
-      - key: NODE_ENV
-        value: production
+      # Note: Do NOT set NODE_ENV=production in the blueprint env for a web service
+      # that runs `npm install` during build, because it makes npm skip devDependencies
+      # (the @types packages) and the TypeScript build fails.
       - key: CORS_ORIGIN
         sync: false
