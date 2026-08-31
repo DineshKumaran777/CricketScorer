@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment files (never commit secrets)
+.env
+.env.development
+.env.production
+.env*.local
+
+# Logs
+*.log
+api.out.log
+server.log
+server-error.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tsbuildinfo
