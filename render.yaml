@@ -4,7 +4,6 @@ services:
     runtime: node
     plan: free
     region: singapore
-    rootDir: /
     buildCommand: npm install && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
@@ -25,5 +24,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: CORS_ORIGIN
-        value: https://your-frontend-domain.com
         sync: false
