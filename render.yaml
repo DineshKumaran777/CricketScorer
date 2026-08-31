@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     region: singapore
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     autoDeploy: true
@@ -19,8 +19,7 @@ services:
 
       # --- Optional (safe defaults are provided by the code if unset) ---
       # PORT is injected automatically by Render for web services; do not override it.
-      # Note: Do NOT set NODE_ENV=production in the blueprint env for a web service
-      # that runs `npm install` during build, because it makes npm skip devDependencies
-      # (the @types packages) and the TypeScript build fails.
+      # buildCommand uses `--include=dev` so devDependencies (@types) always install
+      # even if NODE_ENV=production is set on the service.
       - key: CORS_ORIGIN
         sync: false

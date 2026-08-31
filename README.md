@@ -63,7 +63,7 @@ This repo is structured so a Render **Web Service** can build it directly from t
 
    | Setting | Value |
    |---|---|
-   | **Build Command** | `npm install && npm run build` |
+   | **Build Command** | `npm install --include=dev && npm run build` |
    | **Start Command** | `npm start` |
    | **Root Directory** | `/` |
 
